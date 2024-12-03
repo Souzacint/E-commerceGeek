@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alura Geek</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="/imagem/Logo.png" alt="Logo do Alura Geek" class="logo">
+    </div>
+  </header>
+
+  <main>
+     <!-- Seção do Formulário -->
+     <section id="adicionar-produto">
+      <h1>Adicionar Produto</h1>
+      <form id="form-produto" action="#" method="POST">
+        <!-- Campo para Nome do Produto -->
+        <label for="nome-produto">Nome do Produto:</label>
+        <input type="text" id="nome-produto" name="nome-produto" placeholder="Digite o nome do produto" required minlength="3" maxlength="50">
+        
+        <!-- Campo para Preço -->
+        <label for="preco-produto">Preço:</label>
+        <input type="number" id="preco-produto" name="preco-produto" placeholder="Digite o preço" step="0.01" min="0" required>
+        
+        <!-- Campo para Imagem -->
+        <label for="imagem-produto">Imagem:</label>
+        <input type="text" id="imagem-produto" name="imagem-produto" placeholder="URL da imagem do produto" pattern="https?://.*" required>
+        
+        <!-- Contêiner de Botões -->
+        <div class="botoes">
+          <button type="submit">Adicionar</button>
+          <button type="reset">Limpar</button>
+        </div>
+      </form>
+    </section> 
+    
+    <!-- Seção de Produtos -->
+    <section id="produtos">
+      <h1>Meus Produtos:</h1>
+      <div class="produtos-lista" data-produtos-container>
+        <!-- Produto 1 -->
+        <div class="produto-card" id="produto-1">
+          <img src="/imagem/QuadroHarryPotter.jpg" alt="Quadro Relíquias Da Morte Harry Potter">
+          <div class="card-container--info">
+            <p class="produto-nome">Quadro Harry Potter</p>
+            <div class="card-container--value">
+              <p class="produto-preco">R$ 89,90</p>
+            </div>
+            <button class="excluir-produto" onclick="excluirProduto(1)">Excluir</button>
+          </div>
+        </div>
+        <!-- Produto 2 -->
+        <div class="produto-card" id="produto-2">
+          <img src="/imagem/CopoHarryPotter.jpg" alt="Copo Oval Relíquias Da Morte Harry Potter">
+          <div class="card-container--info">
+            <p class="produto-nome">Copo Harry Potter</p>
+            <div class="card-container--value">
+              <p class="produto-preco">R$ 59,90</p>
+            </div>
+            <button class="excluir-produto" onclick="excluirProduto(2)">Excluir</button>
+          </div>
+        </div>
+        <!-- Produto 3 -->
+        <div class="produto-card" id="produto-3">
+          <img src="/imagem/FunkoDumbledore.jpg" alt="Boneco Funko Dumbledore">
+          <div class="card-container--info">
+            <p class="produto-nome">Funko Dumbledore</p>
+            <div class="card-container--value">
+              <p class="produto-preco">R$ 99,90</p>
+            </div>
+            <button class="excluir-produto" onclick="excluirProduto(3)">Excluir</button>
+          </div>
+        </div>
+        <!-- Produto 4 -->
+        <div class="produto-card" id="produto-4">
+          <img src="/imagem/FunkoHermione.jpg" alt="Boneco Funko Hermione Granger">
+          <div class="card-container--info">
+            <p class="produto-nome">Funko Hermione</p>
+            <div class="card-container--value">
+              <p class="produto-preco">R$ 99,90</p>
+            </div>
+            <button class="excluir-produto" onclick="excluirProduto(4)">Excluir</button>
+          </div>
+        </div>
+        <!-- Produto 5 -->
+        <div class="produto-card" id="produto-5">
+          <img src="/imagem/FunkoHarryPotter.jpg" alt="Boneco Funko Harry Potter">
+          <div class="card-container--info">
+            <p class="produto-nome">Funko Harry Potter</p>
+            <div class="card-container--value">
+              <p class="produto-preco">R$ 109,90</p>
+            </div>
+            <button class="excluir-produto" onclick="excluirProduto(5)">Excluir</button>
+          </div>
+        </div>
+        <!-- Produto 6 -->
+        <div class="produto-card" id="produto-6">
+          <img src="/imagem/FunkoRonWeasley.jpg" alt="Boneco Funko Ron Weasley">
+          <div class="card-container--info">
+            <p class="produto-nome">Funko Ron Weasley</p>
+            <div class="card-container--value">
+              <p class="produto-preco">R$ 99,90</p>
+            </div>
+            <button class="excluir-produto" onclick="excluirProduto(6)">Excluir</button>
+          </div>
+        </div>
+      </div>
+      <p class="nenhum-produto" style="display: none;">Nenhum produto foi adicionado.</p>
+    </section>     
+    </main>    
+
+  <footer>
+    <div class="logo-container">
+      <img src="/imagem/Logo.png" alt="Logo do Alura Geek" class="logo">
+    </div>
+    <p>&copy; 2024 DESENVOLVIDO POR CÍNTIA MEDEIROS.</p>
+  </footer>
+  
+  <script type="module" src="/js/produtos.js"></script>
+<script type="module" src="/js/formulario.js"></script>
+
+</body>
+</html>

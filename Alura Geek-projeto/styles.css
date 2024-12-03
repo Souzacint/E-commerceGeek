@@ -1,0 +1,272 @@
+/* Incorporando a fonte "Almendra" */
+@import url('https://fonts.googleapis.com/css2?family=Almendra&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+  font-family: 'Almendra', serif; 
+  background-color: #f5f5f5; 
+  color: #333; 
+  line-height: 1.6;
+  scroll-behavior: smooth; 
+}
+
+/* Cabeçalho */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333; 
+  color: #fff; 
+  padding: 20px;
+  border-bottom: 3px solid #D4A017; /* Detalhe dourado na parte inferior */
+}
+
+header img {
+  max-width: 200px;
+  height: auto;
+}
+
+/* Estilos do Main */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: calc(100vh - 160px);
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+section {
+  flex: 1 1 48%; /* Cada seção ocupa metade da largura */
+  max-width: 50%; /* Garantir que as seções não ultrapassem 50% da largura */
+}
+
+/* Seção de Formulário */
+#adicionar-produto {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #D4A017; 
+  border-right: 4px solid #D4A017; /* Detalhe dourado na borda esquerda */
+}
+
+#adicionar-produto h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #D4A017; /* Linha dourada abaixo do título */
+  padding-bottom: 10px;
+}
+
+#adicionar-produto label {
+  font-size: 14px;
+  color: #333; 
+  margin-bottom: 5px;
+  display: block;
+}
+
+#adicionar-produto input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 30px;
+  border: 3px solid #ccc; 
+  box-sizing: border-box;
+}
+
+/* Estilo para o campo texto com foco */
+#adicionar-produto input:focus,
+#adicionar-produto textarea:focus {
+  outline: none; 
+  border: 3px solid #D4A017; 
+}
+
+.botoes button {
+  background-color: #333; 
+  font-family: 'Almendra', serif;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.botoes button:hover {
+  background-color: #D4A017; 
+  transform: scale(1.05);
+}
+
+/* Seção de Produtos */
+#produtos {
+  background-color: #fff; 
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 80vh;
+  overflow-y: auto;
+  border-top: 4px solid #D4A017;
+  border-left: 4px solid #D4A017; 
+}
+
+#produtos h1 {
+  font-size: 24px;
+  color: #333; 
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 2px solid #D4A017; /* Linha dourada abaixo do título */
+  padding-bottom: 10px;
+}
+
+.produtos-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.produto-card {
+  background-color: #f5f5f5; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: calc(30% - 20px); /* Tamanho dos cards */
+  overflow: hidden;
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  margin-bottom: 20px;
+  border: 2px solid transparent;
+  border-top: 4px solid #D4A017; 
+}
+
+.produto-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #e0e0e0; 
+  border-color: #D4A017; 
+}
+
+.produto-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.card-container--info {
+  padding-top: 10px;
+}
+
+.produto-nome {
+  font-size: 16px;
+  color: #333; 
+}
+
+.card-container--value {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.produto-preco {
+  font-weight: bold;
+  color: #333; 
+}
+
+.icone-excluir {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s;
+}
+
+.icone-excluir:hover {
+  transform: scale(1.2);
+  filter: brightness(0.8);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  header img {
+    max-width: 150px;
+    margin-bottom: 10px;
+  }
+
+  main {
+    flex-direction: column; /* Disposição em coluna */
+    align-items: center; /* Centraliza os elementos */
+    gap: 15px;
+  }
+
+  section {
+    flex: 1 1 100%; /* Ocupa toda a largura */
+    max-width: 100%; /* Garantir que as seções não ultrapassem a largura da tela */
+  }
+
+  #adicionar-produto, #produtos {
+    padding: 20px;
+  }
+
+  .produto-card {
+    width: calc(100% - 40px); /* Ocupa quase toda a largura */
+  }
+
+  .botoes button {
+    width: 100%; /* Botões ocupam toda a largura em telas menores */
+  }
+
+  footer {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px;
+  }
+
+  header img {
+    max-width: 120px;
+  }
+
+  #adicionar-produto input {
+    width: 100%; /* Campos de formulário ocupam toda a largura */
+  }
+
+  .produto-card {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+
+/* Rodapé */
+footer {
+  background-color: #333; 
+  color: #D4A017;
+  text-align: center;
+  padding: 20px;
+  position: sticky;
+  width: 100%;
+  bottom: 0;
+}
+
+footer img {
+  max-width: 120px;
+}

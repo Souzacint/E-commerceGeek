@@ -1,0 +1,40 @@
+{
+  "produtos": [
+    {
+      "id": "1",
+      "nome": "Quadro Harry Potter",
+      "imagem": "/imagem/QuadroHarryPotter.jpg",
+      "preco": 89.9
+    },
+    {
+      "id": "2",
+      "nome": "Copo Harry Potter",
+      "imagem": "/imagem/CopoHarryPotter.JPG",
+      "preco": 59.9
+    },
+    {
+      "id": "3",
+      "nome": "Funko Dumbledore",
+      "imagem": "/imagem/FunkoDumbledore.jpg",
+      "preco": 99.9
+    },
+    {
+      "id": "4",
+      "nome": "Funko Hermione",
+      "imagem": "/imagem/FunkoHermione.jpg",
+      "preco": 99.9
+    },
+    {
+      "id": "5",
+      "nome": "Funko Harry Potter",
+      "imagem": "/imagem/FunkoHarryPotter.JPG",
+      "preco": 109.9
+    },
+    {
+      "id": "6",
+      "nome": "Funko Ron Weasley",
+      "imagem": "/imagem/FunkoRonWeasley.jpg",
+      "preco": 99.9
+    }
+  ]
+}
